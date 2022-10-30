@@ -10,7 +10,7 @@ public class VicePresident extends Approver{
     @Override
     public void approve(int id, double cost, Type type) {
         if (canApprove(id, cost, type)) {
-            System.out.println("Vice President approved purchase with id " + id + " that costs " + cost);
+            System.out.println("Vice President approved purchase with id " + id + " that costs " + cost + ".");
             return;
         }
 
@@ -24,35 +24,35 @@ public class VicePresident extends Approver{
         
         switch (type) {
             case CONSUMABLES:
-                if (cost < 700) {
+                if (cost <= 700) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case CLERICAL:
-                if (cost < 1500) {
+                if (cost <= 1500) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case GADGETS:
-                if (cost < 2000) {
+                if (cost <= 2000) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case GAMING:
-                if (cost < 4500) {
+                if (cost <= 4500) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case PC:
-                if (cost < 6500) {
+                if (cost <= 6500) {
                     result = true;
                     return result;
                 } else {

@@ -9,7 +9,7 @@ public class Manager extends Approver {
     @Override
     public void approve(int id, double cost, Type type) {
         if (canApprove(id, cost, type)) {
-            System.out.println("Manager approved purchase with id " + id + " that costs " + cost);
+            System.out.println("Manager approved purchase with id " + id + " that costs " + cost + ".");
             return;
         }
 
@@ -23,35 +23,35 @@ public class Manager extends Approver {
 
         switch (type) {
             case CONSUMABLES:
-                if (cost < 300) {
+                if (cost <= 300) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case CLERICAL:
-                if (cost < 500) {
+                if (cost <= 500) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case GADGETS:
-                if (cost < 1000) {
+                if (cost <= 1000) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case GAMING:
-                if (cost < 3000) {
+                if (cost <= 3000) {
                     result = true;
                     return result;
                 } else {
                     break;
                 }
             case PC:
-                if (cost < 5000) {
+                if (cost <= 5000) {
                     result = true;
                     return result;
                 } else {
